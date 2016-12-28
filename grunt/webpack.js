@@ -8,7 +8,10 @@ module.exports = {
     entry: {
       application: './index.js',
       specs: './spec/_all.js',
-      vendor: ['jquery', 'bootstrap-sass'],
+      // uncomment for bootstrap instead of materialize
+      // vendor: ['jquery', 'bootstrap-sass'],
+      // uncomment for materialize instead of bootstrap
+      vendor: ['jquery', 'materialize-css'],
     },
 
     output: {
@@ -72,6 +75,7 @@ module.exports = {
     resolve: {
       alias: {
         handlebars: 'handlebars/dist/handlebars.js',
+        jquery: path.resolve(__dirname, '../node_modules/jquery/dist/jquery.js'), // The ../node_modules seems hacky JAF
       },
     },
     stats: {

@@ -1,2 +1,6 @@
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+// Un-comment for bootstrap instead of materialize
+// $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+// @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+// Un-comment for materialize instead of bootstrap
+@import './material-design-icons';
