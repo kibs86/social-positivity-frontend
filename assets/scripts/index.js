@@ -5,6 +5,11 @@ const config = require('./config');
 
 $(() => {
   setAPIOrigin(location, config);
+
+  // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
 });
 
 // use require with a reference to bundle the file and use it in this file
