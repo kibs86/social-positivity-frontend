@@ -21,8 +21,7 @@ const onLogin = () => {
 const onLogout = () => {
   console.log('Clicked log out button');
   FB.logout(function(response) {
-   console.log('log out');
-   console.log(response);
+   ui.onLogoutSuccess(response);
   });
 };
 // LOGIN PRE-CHECK

@@ -1,6 +1,7 @@
 'use strict';
 
 const showHomeTemplate = require('../templates/home.handlebars');
+const showTitleTemplate = require('../templates/title.handlebars');
 
 const onLoginSuccess = (response) => {
   console.log("Login successful");
@@ -22,8 +23,19 @@ const onLoginFailure = (response) => {
   console.log(response);
 };
 
+const onLogoutSuccess = (response) => {
+  console.log("Logged out");
+  console.log(response);
+  $('#content').html(showTitleTemplate());
+  $('.login-btn').show();
+  $('.button-collapse').sideNav('hide');
+  $('.description').show();
+  $('.logout-btn').hide();
+};
+
 module.exports = {
   onLoginSuccess,
   onLoginPartial,
   onLoginFailure,
+  onLogoutSuccess,
 };
