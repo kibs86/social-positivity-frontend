@@ -12,16 +12,8 @@ $(() => {
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
   //$('.collapsible').collapsible();
 
-  // fb init placeholder
-  // window.fbAsyncInit = function() {
-  //   FB.init({
-  //     appId      : '1157020744413721',
-  //     cookie     : true,  // enable cookies to allow the server to access
-  //                         // the session
-  //     xfbml      : true,  // parse social plugins on this page
-  //     version    : 'v2.8' // use graph api version 2.8
-  //   });
-  // };
+  // Hide navbar on page load
+  $('.button-collapse').sideNav('hide');
 
   // set fbEvents handlers
   fbEvents.addHandlers();

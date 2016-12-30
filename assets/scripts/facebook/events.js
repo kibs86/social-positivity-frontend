@@ -58,7 +58,7 @@ const onLogin = () => {
 // }
 
 const addHandlers = () => {
-  $('#login-btn').on('click', onLogin);
+  $('.login-btn').on('click', onLogin);
 };
 
 module.exports = {

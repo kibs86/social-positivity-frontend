@@ -1,8 +1,14 @@
 'use strict';
 
+const showHomeTemplate = require('../templates/home.handlebars');
+
 const onLoginSuccess = (response) => {
   console.log("Login successful");
   console.log(response);
+  $('#content').html(showHomeTemplate());
+  $('.login-btn').hide();
+  $('.button-collapse').sideNav('hide');
+  $('.description').hide();
 };
 
 const onLoginPartial = (response) => {

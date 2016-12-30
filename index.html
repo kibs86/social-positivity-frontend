@@ -23,25 +23,25 @@
 <body>
 
   <!-- START FACEBOOK CONFIG -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1157020744413721',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-    FB.AppEvents.logPageView();
-  };
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1157020744413721',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v2.8'
+      });
+      FB.AppEvents.logPageView();
+    };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
- </script>
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+   </script>
   <!-- <script>
     // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
@@ -152,23 +152,24 @@
         </div>
       </div>
     </li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><button class="btn-small waves-effect waves-light blue darken-4 login-btn" type="button">Login with Facebook</button></li>
     <li><a href="#!">Second Link</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Subheader</a></li>
     <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
   </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="medium material-icons blue-grey-text">menu</i></a>
+  <a data-activates="slide-out" class="button-collapse show-on-large"><i class="medium material-icons blue-grey-text">menu</i></a>
   <!-- END NAV -->
-  <div class="section no-pad-bot" id="index-banner">
+
+  <div class="section no-pad-bot">
     <div class="container">
       <br><br>
       <h1 class="header center blue-grey-text">MY SOCIAL SENTIMENT</h1>
       <div class="row center">
-        <h5 class="header col s12 light">Bringing social media sentiment analysis to a personal level.</h5>
+        <h5 class="header col s12 light description">Bringing social media sentiment analysis to a personal level.</h5>
       </div>
       <div class="row center">
-        <button id="login-btn" class="btn-large waves-effect waves-light blue darken-4" type="button">Login with Facebook</button>
+        <button class="btn-large waves-effect waves-light blue darken-4 login-btn" type="button">Login with Facebook</button>
       </div>
       <div class="row center" id="status">
       </div>
@@ -176,65 +177,69 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="section">
+  <!-- START CONTENT -->
+  <div id="content">
+    <div class="container">
+      <div class="section">
 
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="card amber lighten-3">
-            <div class="card-image waves-effect waves-block waves-light">
-              <h3 class="center blue-grey-text"><i class="medium material-icons">info_outline</i></h3>
+        <!--   Icon Section   -->
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="card amber lighten-3">
+              <div class="card-image waves-effect waves-block waves-light">
+                <h3 class="center blue-grey-text"><i class="medium material-icons">info_outline</i></h3>
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">General Information<i class="material-icons right">more_vert</i></span>
+              </div>
+              <div class="card-reveal amber lighten-3">
+                <span class="card-title grey-text text-darken-4">General Information<i class="material-icons right">close</i></span>
+                <p class="light">This app analyzes text from your Facebook timeline or from text you input and
+                shows you the positivity/negativity of keywords found within that text.</p>
+              </div>
             </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">General Information<i class="material-icons right">more_vert</i></span>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="card blue lighten-3">
+              <div class="card-image waves-effect waves-block waves-light">
+                <h3 class="center blue-grey-text"><i class="medium material-icons">help_outline</i></h3>
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">How It Works<i class="material-icons right">more_vert</i></span>
+              </div>
+              <div class="card-reveal blue lighten-3">
+                <span class="card-title grey-text text-darken-4">How It Works<i class="material-icons right">close</i></span>
+                <p class="light">The Facebook API is used for authentication and to pull in the timeline for the user.  The IBM Watson
+                Alchemy Language API is used to analyze the sentiment of target phrases found within the text provided.</p>
+              </div>
             </div>
-            <div class="card-reveal amber lighten-3">
-              <span class="card-title grey-text text-darken-4">General Information<i class="material-icons right">close</i></span>
-              <p class="light">This app analyzes text from your Facebook timeline or from text you input and
-              shows you the positivity/negativity of keywords found within that text.</p>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="card red lighten-3">
+              <div class="card-image waves-effect waves-block waves-light">
+                <h3 class="center blue-grey-text"><i class="medium material-icons">star_outline</i></h3>
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Future Enhancements<i class="material-icons right">more_vert</i></span>
+              </div>
+              <div class="card-reveal red lighten-3">
+                <span class="card-title grey-text text-darken-4">Future Enhancements<i class="material-icons right">close</i></span>
+                <p class="light">Future versions of this application will include integration with Twitter and other social media applications.</p>
+              </div>
             </div>
           </div>
         </div>
+        <br><br>
 
-        <div class="col s12 m4">
-          <div class="card blue lighten-3">
-            <div class="card-image waves-effect waves-block waves-light">
-              <h3 class="center blue-grey-text"><i class="medium material-icons">help_outline</i></h3>
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">How It Works<i class="material-icons right">more_vert</i></span>
-            </div>
-            <div class="card-reveal blue lighten-3">
-              <span class="card-title grey-text text-darken-4">How It Works<i class="material-icons right">close</i></span>
-              <p class="light">The Facebook API is used for authentication and to pull in the timeline for the user.  The IBM Watson
-              Alchemy Language API is used to analyze the sentiment of target phrases found within the text provided.</p>
-            </div>
-          </div>
+        <div class="section">
+
         </div>
-
-        <div class="col s12 m4">
-          <div class="card red lighten-3">
-            <div class="card-image waves-effect waves-block waves-light">
-              <h3 class="center blue-grey-text"><i class="medium material-icons">star_outline</i></h3>
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Future Enhancements<i class="material-icons right">more_vert</i></span>
-            </div>
-            <div class="card-reveal red lighten-3">
-              <span class="card-title grey-text text-darken-4">Future Enhancements<i class="material-icons right">close</i></span>
-              <p class="light">Future versions of this application will include integration with Twitter and other social media applications.</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    <br><br>
-
-    <div class="section">
-
+      </div>
     </div>
   </div>
-</div>
+  <!-- END CONTENT -->
 
   <footer class="page-footer blue-grey lighten-2">
     <div class="footer-copyright">
@@ -243,5 +248,5 @@
       </div>
     </div>
   </footer>
-  </body>
+</body>
 </html>
