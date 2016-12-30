@@ -23,6 +23,25 @@
 <body>
 
   <!-- START FACEBOOK CONFIG -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1157020744413721',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+ </script>
   <!-- <script>
     // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
@@ -150,6 +169,8 @@
       </div>
       <div class="row center">
         <button id="login-btn" class="btn-large waves-effect waves-light blue darken-4" type="button">Login with Facebook</button>
+      </div>
+      <div class="row center" id="status">
       </div>
 
     </div>
