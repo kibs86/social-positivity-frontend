@@ -9,6 +9,7 @@ const onLoginSuccess = (response) => {
   $('.login-btn').hide();
   $('.button-collapse').sideNav('hide');
   $('.description').hide();
+  $('.logout-btn').show();
 };
 
 const onLoginPartial = (response) => {

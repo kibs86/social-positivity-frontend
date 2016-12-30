@@ -2,7 +2,7 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin');
 const config = require('./config');
-const fbEvents = require('./facebook/events.js');
+const fbEvents = require('./fb-auth/events.js');
 
 $(() => {
   setAPIOrigin(location, config);
@@ -12,8 +12,8 @@ $(() => {
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
   //$('.collapsible').collapsible();
 
-  // Hide navbar on page load
-  $('.button-collapse').sideNav('hide');
+  // Hide log out link on page load
+  $('.logout-btn').hide();
 
   // set fbEvents handlers
   fbEvents.addHandlers();
