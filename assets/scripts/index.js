@@ -2,7 +2,8 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin');
 const config = require('./config');
-const fbEvents = require('./fb-auth/events.js');
+const fbAuthEvents = require('./fb-auth/events.js');
+const fbEvents = require('./facebook/events.js');
 const showTitleTemplate = require('./templates/title.handlebars');
 
 $(() => {
@@ -20,6 +21,7 @@ $(() => {
   $('.logout-btn').hide();
 
   // set fbEvents handlers
+  fbAuthEvents.addHandlers();
   fbEvents.addHandlers();
 });
 
