@@ -7,13 +7,14 @@ const concatenateMessage = (data) => {
   data.forEach(function(entry) {
     newMessage += entry.message;
   });
-  console.log(newMessage);
+  //console.log(newMessage);
+  return newMessage;
 };
 
 const onGetMyTimelineSuccess = (response) => {
   store.data = response.data;
   console.log('store.data is ', store.data);
-  concatenateMessage(store.data);
+  return(concatenateMessage(store.data));
 };
 
 module.exports = {

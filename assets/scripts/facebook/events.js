@@ -12,8 +12,27 @@ const onGetMyAuth = () => {
 
 const onGetMyTimeline = () => {
   console.log('Get my timeline');
-  FB.api('/me/posts', function(response) {
-    ui.onGetMyTimelineSuccess(response);
+  // FB.api('/me/posts', function(response) {
+  //   ui.onGetMyTimelineSuccess(response);
+  // });
+  new Promise((resolve, reject) => {
+    FB.api('/me/posts', function(response) {
+      if (!response || response.error) {
+        reject('response.error');
+      } else {
+        resolve(response);
+      }
+    });
+  })
+  .then((response) => {
+    let newMessage = ui.onGetMyTimelineSuccess(response);
+    return newMessage;
+  })
+  .then((newMessage) => {
+    console.log('newMessage is ', newMessage);
+  })
+  .catch((err) => {
+    console.error(err);
   });
 };
 
