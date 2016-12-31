@@ -1,11 +1,14 @@
 'use strict';
 
+const store = require('../store.js');
 const showHomeTemplate = require('../templates/home.handlebars');
 const showTitleTemplate = require('../templates/title.handlebars');
 
 const onLoginSuccess = (response) => {
   console.log("Login successful");
   console.log(response);
+  store.user = response.authResponse;
+  console.log('store.user is ', store.user);
   $('#content').html(showHomeTemplate());
   $('.login-btn').hide();
   $('.button-collapse').sideNav('hide');

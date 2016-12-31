@@ -15,13 +15,13 @@ const onLogin = () => {
       // they are logged into this app or not.
       ui.loginFailure(response);
     }
-  });
+  }, {scope: 'user_posts,email'});
 };
 
 const onLogout = () => {
   console.log('Clicked log out button');
   FB.logout(function(response) {
-   ui.onLogoutSuccess(response);
+    ui.onLogoutSuccess(response);
   });
 };
 // LOGIN PRE-CHECK
